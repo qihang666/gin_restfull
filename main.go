@@ -2,7 +2,6 @@ package main
 
 import (
 	"gin_restfull/config"
-	_ "gin_restfull/config"
 	_ "gin_restfull/docs"
 	"gin_restfull/router"
 	"log"
