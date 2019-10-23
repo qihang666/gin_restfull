@@ -1,0 +1,116 @@
+definitions:
+  model.User:
+    properties:
+      age:
+        type: integer
+      id:
+        type: integer
+      password:
+        type: string
+      username:
+        type: string
+    type: object
+  service.Result:
+    properties:
+      code:
+        type: integer
+      data:
+        type: object
+      message:
+        type: string
+    type: object
+host: localhost:9000
+info:
+  contact:
+    email: 977767937@qq.com
+    name: qihang666
+    url: https://github.com/qihang666
+  description: Gin swagger 示例项目
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  title: Gin swagger
+  version: "1.0"
+paths:
+  /user:
+    delete:
+      consumes:
+      - application/x-json-stream
+      operationId: "1"
+      parameters:
+      - description: 用户
+        in: body
+        name: user
+        required: true
+        schema:
+          $ref: '#/definitions/model.User'
+          type: object
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/service.Result'
+      summary: 删除用户信息
+      tags:
+      - User
+    get:
+      consumes:
+      - application/x-json-stream
+      operationId: "1"
+      parameters:
+      - description: 用户
+        in: body
+        name: user
+        required: true
+        schema:
+          $ref: '#/definitions/model.User'
+          type: object
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/service.Result'
+      summary: 获取用户信息
+      tags:
+      - User
+    post:
+      consumes:
+      - application/x-json-stream
+      operationId: "1"
+      parameters:
+      - description: 用户
+        in: body
+        name: user
+        required: true
+        schema:
+          $ref: '#/definitions/model.User'
+          type: object
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/service.Result'
+      summary: 新增用户信息
+      tags:
+      - User
+    put:
+      consumes:
+      - application/x-json-stream
+      operationId: "1"
+      parameters:
+      - description: 用户
+        in: body
+        name: user
+        required: true
+        schema:
+          $ref: '#/definitions/model.User'
+          type: object
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/service.Result'
+      summary: 更新用户信息
+      tags:
+      - User
+swagger: "2.0"
